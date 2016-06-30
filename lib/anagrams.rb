@@ -9,13 +9,13 @@ class String
         return word_list
       end
     else
-      array_of_words = word_list.split(',')
+      array_of_words = word_list.split(' ')
       array_of_words.each do |word|
         if users_word.split('').sort() == word.strip().split('').sort()
           matches.push(word)
         end
       end
-      matches.join(',')
+      matches.join(', ')
     end
   end
 end
